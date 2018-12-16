@@ -1,0 +1,29 @@
+﻿@using MVClearning.Models
+<!-- 
+    Since we'll be using the models portion often in
+    this page we will do a using statment so that we
+    do not have call it everytime we want to use something in it
+ -->
+
+<!--Below using statment we define our model and it's following datatype -->
+@model List<Instructor>
+
+
+@{
+    ViewBag.Title = "Instructors";
+}
+
+<h2>Instructor</h2>
+@{
+    <!--
+        we can make a loop searching the model for every instructor 
+        since weknow that the model is a list.
+        we are simply listing each "Insturtor" in the list that we made.  
+
+    -->
+    foreach (Instructor instructor in Model)
+    {
+        <li> @instructor.FirstName</li>
+    }
+}
+
