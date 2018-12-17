@@ -1,0 +1,64 @@
+﻿@using CarInsurance.Models
+@model List<QuoteModel>
+
+<!DOCTYPE html>
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters">
+                    <h4 style="margin-top:30px;">Personal Details:</h4>
+                    <div class="form-group col-md-12">
+                        <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="EmailAddress" type="email" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="DOB" type="date" class="form-control" />
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <h4>Car Details:</h4>
+                    <div class="form-group col-md-12">
+                        <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <h4> Have you ever had a DUI?(yes or no):</h4>
+                    <div class="form-group col-md-12">
+                        <input name="DUI" type="text" class="form-control" placeholder="Example: no" />
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <h4> How many speeding tickets have you had?:</h4>
+                    <div class="form-group col-md-12">
+                        <input name="Tickets" type="text" class="form-control" placeholder="Example: 0" />
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <h4>Would you like A:full coverage or B:liability?(A or B):</h4>
+                    <div class="form-group col-md-12">
+                        <input name="coverage" type="text" class="form-control" placeholder="Example: A" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary col-md-5">Submit</button>
+
+            }
+        </div>
+
+    </div>
+</div>
